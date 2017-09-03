@@ -53,6 +53,10 @@ header{
 	border-bottom: 1px solid #fff; 
 }
 
+.cf-navbar ul{
+	float: right;
+}
+
 .cf-navbar ul > li{
 	display: inline-block;
 	position: relative;
@@ -90,6 +94,11 @@ header{
 	position: relative;
     bottom: -1px;
     text-decoration: none;
+}
+
+.cf-logo{
+	font-size: 30px;
+	line-height: 51px;
 }
 
 
