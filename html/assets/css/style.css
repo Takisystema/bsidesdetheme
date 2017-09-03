@@ -1,0 +1,235 @@
+/*
+
+	Conference website
+	Version: v0.1
+	Log:
+
+*/
+
+/*Reset*/
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+ul,
+li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a,
+a:focus,
+a:hover{
+	color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	margin: 0;
+}
+
+/*Header*/
+header{
+	background-image: url(https://images.pexels.com/photos/302655/pexels-photo-302655.jpeg?w=940&h=650&auto=compress&cs=tinysrgb);
+	background-repeat: no-repeat;
+	height: 500px;
+	color: #fff;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
+/*Navigation*/
+.cf-navbar{
+	border-bottom: 1px solid #fff; 
+}
+
+.cf-navbar ul > li{
+	display: inline-block;
+	position: relative;
+}
+
+.cf-navbar ul > li > a{
+	display: block;
+	padding: 15px;
+	position: relative;
+    bottom: -1px;
+}
+
+.cf-navbar ul > li.cf-active > a{
+	border-bottom: 1px solid #ff0000;
+}
+
+.cf-navbar ul > li.cf-active > a:before{
+	content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #ff0000;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cf-navbar ul > li > a:hover,
+.cf-navbar ul > li > a:focus{
+	border-bottom: 1px solid #ff0000;
+	position: relative;
+    bottom: -1px;
+    text-decoration: none;
+}
+
+
+/*Banner*/
+.cf-banner-inner{
+	padding: 150px 0px;
+	text-align: center;
+	width: 50%;
+    margin: 0 auto;
+}
+
+.cf-banner-inner > span:before,
+.cf-banner-inner > span:after{
+	content: "";
+    width: 50px;
+    border: 1px solid #ff0000;
+    display: inline-block;
+}
+
+.cf-banner-inner > span:before{
+    margin-right: 10px;
+    margin-bottom: 4px;
+}
+
+.cf-banner-inner > span:after{
+    margin-left: 10px;
+    margin-bottom: 4px;
+}
+
+
+/*Content*/
+.cf-box:nth-child(even) > [class$="6"]{
+	float: right;
+}
+
+.cf-box > [class$="6"]{
+	padding: 15px;
+	height: 600px;
+}
+
+.cf-box > [class$="6"]:last-child{
+	background-color: yellow;
+}
+
+.cf-sponser-box{
+	text-align: center;
+	height: 200px;
+	background-color: #f7f7f7;
+	color: #444349;
+	font-size: 50px;
+	line-height: 200px;
+	border-left: 1px solid #fff;
+}
+
+.cf-sponser-box:nth-child(even){
+	background-color: #fff;
+}
+
+.cf-sponser-box:hover{
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+	-webkit-transform: scale(1.2);;
+	transform: scale(1.2);
+	z-index: 10;
+	border: 0;
+}
+
+.cf-twitter-box{
+	position: relative;
+	z-index: 1;
+	height: 300px;
+	text-align: center;
+	padding: 80px 15px;
+	color: #000;
+}
+
+.cf-twitter-box a{
+	text-decoration: underline;
+}
+
+.cf-twitter-box a:hover,
+.cf-twitter-box a:focus{
+	text-decoration: none;
+}
+
+.cf-twitter-box p{
+	width: 50%;
+	margin: 10px auto;
+	font-size: 18px;
+}
+
+.cf-twitter-box:before{
+	content: " ";
+	position: absolute;
+	top: 0; 
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-image: url(https://images.pexels.com/photos/515166/pexels-photo-515166.jpeg?w=940&h=650&auto=compress&cs=tinysrgb);
+	z-index: -1;
+	opacity: 0.2;
+    filter: alpha(opacity=20); /* For IE8 and earlier */
+}
+
+.cf-twitter-box i{
+	font-size: 50px;
+}
+
+
+/*Footer*/
+footer{
+	height: 80px;
+    background-color: #000;
+    line-height: 80px;
+    color: #fff;
+}
+
+.cf-social{
+	text-align: right;
+}
+
+.cf-social li{
+	display: inline-block;
+}
+
+.cf-social li a{
+	display: block;
+	padding: 0px 5px 0px 0px;
+	transition: all .2s ease-in-out;
+}
+
+.cf-social li > a:hover{
+	-ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari */
+    transform: scale(1.2);
+}
+
+.cf-social i{
+	font-size: 26px;
+}
+
+
+
