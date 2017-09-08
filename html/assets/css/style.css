@@ -53,9 +53,9 @@ h6{
 
 /*Header*/
 header{
-	background-image: url(https://images.pexels.com/photos/302655/pexels-photo-302655.jpeg?w=940&h=650&auto=compress&cs=tinysrgb);
+	background-color: #000;
 	background-repeat: no-repeat;
-	height: 500px;
+	height: 250px;
 	color: #fff;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -63,6 +63,9 @@ header{
 	background-size: cover;
 }
 
+header.home{
+	height: 500px;
+}
 
 /*Navigation*/
 .cf-navbar{
@@ -89,7 +92,8 @@ header{
 	border-bottom: 1px solid #ff0000;
 }
 
-.cf-navbar ul > li.cf-active > a:before{
+.cf-navbar ul > li.cf-active > a:before,
+.cf-tabs .cf-tab-header.cf-active:before{
 	content: "";
     width: 0;
     height: 0;
@@ -178,8 +182,14 @@ header{
 
 
 /*Banner*/
-.cf-banner-inner{
+.home .cf-banner-inner{
 	padding: 145px 0px;
+	text-align: center;
+    margin: 0 auto;
+}
+
+.cf-banner-inner{
+	padding: 75px 0px;
 	text-align: center;
     margin: 0 auto;
 }
@@ -188,6 +198,15 @@ header{
 	.cf-banner-inner{
 		width: 50%;
 	}
+}
+
+.cf-banner-inner a{
+	text-decoration: underline;
+}
+
+.cf-banner-inner a:hover,
+.cf-banner-inner a:focus{
+	text-decoration: none;
 }
 
 .cf-banner-inner > span:before,
@@ -450,4 +469,89 @@ footer{
 }
 
 
+/*Tabs*/
+.cf-tabs .cf-tab-header{
+	padding: 20px 15px;
+	border-bottom: 4px solid #cfcfcf;
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+}
+
+.cf-tabs .cf-tab-header.cf-active{
+	border-bottom: 4px solid red;
+}
+
+.cf-tabs .cf-tab-header:hover,
+.cf-tabs .cf-tab-header:focus{
+	border-bottom: 4px solid red;
+}
+
+.cf-tab-content{
+	padding: 20px 15px;
+	display: none;
+	-webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+.cf-tab-content.cf-active{
+	display: block;
+}
+
+/*Speakers*/
+.cf-tab-content .cf-speaker-img{
+	width: 180px;
+}
+
+.cf-tab-content .cf-speaker-img img{
+	width: 200px;
+	width: 150px;
+    object-fit: cover;
+    height: 150px;
+    border-radius: 6px;
+}
+
+.cf-tab-content ul > li{
+	padding: 10px 0px;
+	border-bottom: 2px solid #000;
+}
+
+.cf-tab-content ul > li:last-child{
+	border-bottom: 0px solid #000;
+}
+
+.cf-speaker-info{
+	height: 150px;
+}
+
+.cf-speaker-info .cf-time{
+	color: #cfcfcf;
+	display: block;
+}
+
+.cf-speaker-info .cf-title{
+	font-weight: 700;
+	font-size: 16px;
+	
+}
+
+
+/*Flexbox*/
+.cf-flex-center{
+	display: flex;
+	justify-content: center;
+    flex-direction: column;
+}
+
+
+/*Fade animation*/
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 

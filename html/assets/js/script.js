@@ -19,5 +19,15 @@ $( document ).ready(function() {
     	$('.cf-mobile-menu').fadeOut();
     });
 
-    
+    // Tabs
+    $('.cf-tabs .cf-tab-header').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('.cf-tabs .cf-tab-header').removeClass('cf-active');
+		$('.cf-tab-content').removeClass('cf-active');
+
+		$(this).addClass('cf-active');
+		$("#"+tab_id).addClass('cf-active');
+	});
+
 });
