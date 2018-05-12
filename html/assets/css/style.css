@@ -333,18 +333,36 @@ header.home{
 	font-weight: 700;
 }
 
-.cf-sponser-box{
-	text-align: center;
-	height: 200px;
-	background-color: #f7f7f7;
-	color: #444349;
-	font-size: 50px;
-	line-height: 200px;
-	border-left: 1px solid #fff;
+.cf-sponser-page .cf-sponser-box{
+	margin: 0px 5px 10px;
 }
 
-.cf-sponser-box:nth-child(even){
+.cf-sponser-box{
+	text-align: center;
+	height: 100px;
 	background-color: #fff;
+	color: #444349;
+	font-size: 50px;
+	line-height: 100px;
+	border: 1px solid #f7f7f7;
+	width: calc(50% - 10px);
+}
+
+@media(min-width: 992px){
+	.cf-sponser-page .cf-sponser-box{
+		margin: 0px 0px 20px;
+	}
+	.cf-sponser-box{
+		width: 16.66666667%;
+		height: 200px;
+		line-height: 200px;
+		background-color: #f7f7f7;
+		border: none;
+	}
+
+	.cf-sponser-box:nth-child(even){
+		background-color: #fff;
+	}
 }
 
 .cf-sponser-box:hover{
@@ -354,10 +372,6 @@ header.home{
 	transform: scale(1.2);
 	z-index: 10;
 	border: 0;
-}
-
-.cf-sponser-page .cf-sponser-box{
-	margin: 0px 0px 20px;
 }
 
 .cf-twitter-box{
