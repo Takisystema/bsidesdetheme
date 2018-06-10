@@ -1,5 +1,6 @@
 .DS_Store
 .idea
 *.log
-wordpress
 .vagrant
+wordpress
+!wordpress/wp-content/themes/bsidetheme/*
